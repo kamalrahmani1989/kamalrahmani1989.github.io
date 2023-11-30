@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[New Project]]></data>
+
+
+  <data name="en_panogroup20_title"><![CDATA[Group 20]]></data>
+
+  <data name="en_pano13_title"><![CDATA[hall (1)]]></data>
+  <data name="en_spotpoint28_tooltip"><![CDATA[KITCHEN]]></data>
+  <data name="en_spotpoint30_tooltip"><![CDATA[CORRIDOR]]></data>
+  <data name="en_pano14_title"><![CDATA[kitchen]]></data>
+  <data name="en_spotpoint29_tooltip"><![CDATA[HALL]]></data>
+  <data name="en_spotpoint50_tooltip"><![CDATA[CORRIDOR]]></data>
+  <data name="en_pano16_title"><![CDATA[rahro]]></data>
+  <data name="en_spotpoint31_tooltip"><![CDATA[HALL]]></data>
+  <data name="en_spotpoint34_tooltip"><![CDATA[SERVICE]]></data>
+  <data name="en_spotpoint42_tooltip"><![CDATA[BEDROOM]]></data>
+  <data name="en_spotpoint51_tooltip"><![CDATA[KITCHEN]]></data>
+  <data name="en_pano32_title"><![CDATA[bath]]></data>
+  <data name="en_spotpoint35_tooltip"><![CDATA[CORRIDOR]]></data>
+  <data name="en_pano36_title"><![CDATA[BEDROOM (3)]]></data>
+  <data name="en_spotpoint43_tooltip"><![CDATA[CORRIDOR]]></data>
+  <data name="en_spotpoint44_tooltip"><![CDATA[CLOSET]]></data>
+  <data name="en_spotpoint46_tooltip"><![CDATA[LIBRARY]]></data>
+  <data name="en_pano37_title"><![CDATA[closet]]></data>
+  <data name="en_spotpoint45_tooltip"><![CDATA[BEDROOM]]></data>
+  <data name="en_spotpoint49_tooltip"><![CDATA[LIBRARY]]></data>
+  <data name="en_pano38_title"><![CDATA[pcmiz]]></data>
+  <data name="en_spotpoint47_tooltip"><![CDATA[BEDROOM]]></data>
+  <data name="en_spotpoint48_tooltip"><![CDATA[CLOSET]]></data>
+
+
+
+
+
+
+  <data name="en_galleryplay_text"><![CDATA[Play / Pause]]></data>
+  <data name="en_gallerynavprev_text"><![CDATA[Previous]]></data>
+  <data name="en_gallerynavnext_text"><![CDATA[Next]]></data>
+  <data name="en_galleryfullscreen_text"><![CDATA[Fullscreen mode]]></data>
+  <data name="en_galleryclose_text"><![CDATA[Close]]></data>
+  <data name="en_gallerypicture_title0"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption0"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title1"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption1"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title2"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption2"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title3"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption3"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title4"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption4"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title5"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption5"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title6"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption6"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title7"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption7"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title8"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption8"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title9"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption9"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title10"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption10"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title11"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption11"><![CDATA[]]></data>
+  <data name="en_gallerypicture_title12"><![CDATA[]]></data>
+  <data name="en_gallerypicture_caption12"><![CDATA[]]></data>
+  <data name="en_buttontooltip"><![CDATA[]]></data>
+  <data name="en_CirclesControlBarprevSceneTip"><![CDATA[Previous scene]]></data>
+  <data name="en_CirclesControlBarnextSceneTip"><![CDATA[Next scene]]></data>
+  <data name="en_CirclesControlBarzoomInTip"><![CDATA[Zoom in]]></data>
+  <data name="en_CirclesControlBarzoomOutTip"><![CDATA[Zoom out]]></data>
+  <data name="en_CirclesControlBarmoveLeftTip"><![CDATA[Move left]]></data>
+  <data name="en_CirclesControlBarmoveRightTip"><![CDATA[Move right]]></data>
+  <data name="en_CirclesControlBarmoveUpTip"><![CDATA[Move up]]></data>
+  <data name="en_CirclesControlBarmoveDownTip"><![CDATA[Move down]]></data>
+  <data name="en_CirclesControlBarhomeTip"><![CDATA[Home]]></data>
+  <data name="en_CirclesControlBaropenFsTip"><![CDATA[Enter fullscreen]]></data>
+  <data name="en_CirclesControlBarcloseFsTip"><![CDATA[Exit fullscreen]]></data>
+  <data name="en_CirclesControlBarautorotateOnTip"><![CDATA[Start autorotation]]></data>
+  <data name="en_CirclesControlBarautorotateOffTip"><![CDATA[Stop autorotation]]></data>
+  <data name="en_CirclesControlBarsoundsOnTip"><![CDATA[Start sounds]]></data>
+  <data name="en_CirclesControlBarsoundsOffTip"><![CDATA[Stop sounds]]></data>
+  <data name="en_CirclesControlBarshowSpotsTip"><![CDATA[Show hotspots]]></data>
+  <data name="en_CirclesControlBarhideSpotsTip"><![CDATA[Hide hotspots]]></data>
+  <data name="en_CirclesControlBarshowThumbnailsTip"><![CDATA[Show thumbnails]]></data>
+  <data name="en_CirclesControlBarhideThumbnailsTip"><![CDATA[Hide thumbnails]]></data>
+  <data name="en_CirclesControlBardisplayHelpTip"><![CDATA[Show help screen]]></data>
+  <data name="en_CirclesControlBarhideHelpTip"><![CDATA[Hide help screen]]></data>
+  <data name="en_CirclesControlBardisplayControlsTip"><![CDATA[Show controls]]></data>
+  <data name="en_CirclesControlBarhideControlsTip"><![CDATA[Hide controls]]></data>
+
+
+  <data name="en_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>
+  <data name="en_vr_setup_advanced"><![CDATA[ADVANCED SETTINGS]]></data>
+  <data name="en_vr_setup_title"><![CDATA[WEB VR SETTINGS]]></data>
+  <data name="en_vr_setup_dvn1"><![CDATA[Device:]]></data>
+  <data name="en_vr_setup_siz1"><![CDATA[Screen size:]]></data>
+  <data name="en_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="en_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="en_vr_setup_hmd3"><![CDATA[Customize]]></data>
+  <data name="en_vr_setup_cal"><![CDATA[Calibrate gyroscope]]></data>
+  <data name="en_vr_setup_sav"><![CDATA[SAVE]]></data>
+  <data name="en_vr_setup_rst"><![CDATA[RESET]]></data>
+  <data name="en_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="en_vr_setup_cls"><![CDATA[CLOSE]]></data>
+  <data name="en_vr_setup_m31"><![CDATA[HMD SETTINGS]]></data>
+  <data name="en_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="en_vr_setup_dst1"><![CDATA[Distortion:]]></data>
+  <data name="en_vr_setup_d2tx"><![CDATA[Distortion 2:]]></data>
+  <data name="en_vr_setup_vig1"><![CDATA[Vignette:]]></data>
+  <data name="en_vr_setup_cac1"><![CDATA[Chromatic aberration:]]></data>
+  <data name="en_vr_setup_olp1"><![CDATA[Overlap:]]></data>
+  <data name="en_vr_setup_m35"><![CDATA[RETURN]]></data>
+  <data name="en_vr_setup_cb1"><![CDATA[GYROSCOPE]]></data>
+  <data name="en_vr_setup_cb2"><![CDATA[Place the device on a flat and[br]stable surface and tab CALIBRATE[br]to correct a gyroscope drifting.]]></data>
+  <data name="en_vr_setup_cb3"><![CDATA[CALIBRATE]]></data>
+  <data name="en_vr_setup_cb4"><![CDATA[RESET]]></data>
+  <data name="en_vr_setup_cb5"><![CDATA[RETURN]]></data>
+  <data name="en_vr_setup_cb6"><![CDATA[Calibrating...]]></data>
+  <data name="en_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
+  <data name="en_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
+  <data name="en_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>
