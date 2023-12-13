@@ -81,10 +81,11 @@ resumeautorotation(forcehotspot);
          zorder="1"
          visible="false"
          onclick="buttonOnClick"
+         alpha="0.7"
          tooltip="buttontooltip"
-         onhover="showTooltip('plugin',buttonTooltipStyle);"
-         onout="hideTooltip();"
-         onover="set(layer[buttonover].visible, true);set(layer[button].visible, false);"
+         onhover="showTooltip('plugin');"
+         onout="hideTooltip();tween(scale, 1.0,0.5,easeOutQuad);tween(alpha,0.7,0.5,easeOutQuad);"
+         onover="tween(scale, 1.2,0.5,easeOutQuad);tween(alpha,1.0,0.5,easeOutQuad);set(layer[buttonover].visible, true);set(layer[button].visible, false);"
          height="125"
          width="300"
          />
@@ -99,10 +100,11 @@ resumeautorotation(forcehotspot);
          zorder="1"
          visible="false"
          onclick="buttonOnClick"
+         alpha="0.7"
          tooltip="buttontooltip"
-         onhover="showTooltip('plugin',buttonTooltipStyle);"
-         onout="hideTooltip();set(layer[button].visible, true);set(layer[buttonover].visible, false);"
-         onover=""
+         onhover="showTooltip('plugin');"
+         onout="hideTooltip();tween(scale, 1.0,0.5,easeOutQuad);tween(alpha,0.7,0.5,easeOutQuad);set(layer[button].visible, true);set(layer[buttonover].visible, false);"
+         onover="tween(scale, 1.2,0.5,easeOutQuad);tween(alpha,1.0,0.5,easeOutQuad);"
          height="125"
          width="300"
          />
@@ -121,29 +123,6 @@ resumeautorotation(forcehotspot);
   <action name="hidebutton">set(layer[button].visible, false);</action>
   <action name="showbutton">if(tour_displaycontrols,set(layer[button].visible, true);set(layer[buttonover].visible, false);,hidebutton(););</action>
 
-<layer name="buttonTooltipStyle"
-  keep="true"
-  enabled="false"
-  capture="false"
-  type="text"
-  align="center"
-  bg="true"
-  bgcolor="0x222222"
-  bgalpha="1"
-  bgroundedge="15"
-  bgborder="0"
-  bgshadow="1.0 1.0 4.0 0x000000 1"
-  txtshadow="1.0 1.0 4.0 0x000000 1"
-  css="color:#cccccc;font-family:Arial;font-weight:bold;font-size:14px;text-align:left;"
-  interactivecontent="false"
-  zorder="0"
-  padding="2"
-  xoffset="0"
-  yoffset="0"
-  visible="false"
-  html=""
-  edge="bottom"
-/>
 
 <!-- ********** -->
 <!-- Gallery -->
@@ -222,11 +201,11 @@ resumeautorotation(forcehotspot);
 		<option name="use_i18n" value="true" type="bool" />
 	</settings>
 	<internaldata>
-		<item name="item_1" title="gallerypicture_title0" caption="gallerypicture_caption0" value="moddata/graphics/gallery/_1_copy_2.jpg"/>
-		<item name="item_2" title="gallerypicture_title1" caption="gallerypicture_caption1" value="moddata/graphics/gallery/_2_copy_2.jpg"/>
-		<item name="item_3" title="gallerypicture_title2" caption="gallerypicture_caption2" value="moddata/graphics/gallery/_3_copy.jpg"/>
-		<item name="item_4" title="gallerypicture_title3" caption="gallerypicture_caption3" value="moddata/graphics/gallery/_4_copy.jpg"/>
-		<item name="item_5" title="gallerypicture_title4" caption="gallerypicture_caption4" value="moddata/graphics/gallery/_5_copy.jpg"/>
+		<item name="item_1" title="gallerypicture_title0" caption="gallerypicture_caption0" value="moderndata/graphics/gallery/_1_copy_2.jpg"/>
+		<item name="item_2" title="gallerypicture_title1" caption="gallerypicture_caption1" value="moderndata/graphics/gallery/_2_copy_2.jpg"/>
+		<item name="item_3" title="gallerypicture_title2" caption="gallerypicture_caption2" value="moderndata/graphics/gallery/_3_copy.jpg"/>
+		<item name="item_4" title="gallerypicture_title3" caption="gallerypicture_caption3" value="moderndata/graphics/gallery/_4_copy.jpg"/>
+		<item name="item_5" title="gallerypicture_title4" caption="gallerypicture_caption4" value="moderndata/graphics/gallery/_5_copy.jpg"/>
 	</internaldata>
 </ptplugin>
 
@@ -542,6 +521,23 @@ resumeautorotation(forcehotspot);
 	</action>
 
 
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
 
   <!-- Sounds Management -->
   <plugin name="soundinterface"
@@ -1021,22 +1017,5 @@ resumeautorotation(forcehotspot);
       );
     );
   </action>
-
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
-
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
-
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
-  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
-  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
-  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
-  
-  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
 
 </krpano>

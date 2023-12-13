@@ -251,7 +251,7 @@ function eventKrpanoLoaded (isWebVr) {
 	if(typeof tourLanguage == "undefined"){
 		tourLanguage = 'en';
 	}
-	ktools.I18N.getInstance().initLanguage(tourLanguage, crossDomainTargetUrl+'moddata/mod_messages_','.xml');
+	ktools.I18N.getInstance().initLanguage(tourLanguage, crossDomainTargetUrl+'moderndata/modern_messages_','.xml');
 	krpanoLoaded = true;
 	
 	if(isWebVr){
@@ -312,7 +312,7 @@ function eventTourChangeLanguage (pLang) {
 		console.log('change tour language : '+pLang);
 	}
 	
-	ktools.I18N.getInstance().initLanguage(pLang, crossDomainTargetUrl+'moddata/mod_messages_','.xml');
+	ktools.I18N.getInstance().initLanguage(pLang, crossDomainTargetUrl+'moderndata/modern_messages_','.xml');
 }
 
 
@@ -329,8 +329,8 @@ function addKolorBox(pPlugID)
 {
 	if(typeof ktools.KolorPluginList.getInstance().getPlugin(pPlugID) == "undefined")
 	{
-		var kolorBoxCSS = new ktools.CssStyle("KolorBoxCSS", crossDomainTargetUrl+"moddata/graphics/KolorBox/kolorBox.css");
-		var kolorBoxJS = new ktools.Script("KolorBoxJS", crossDomainTargetUrl+"moddata/graphics/KolorBox/KolorBox.min.js", [], true);
+		var kolorBoxCSS = new ktools.CssStyle("KolorBoxCSS", crossDomainTargetUrl+"moderndata/graphics/KolorBox/kolorBox.css");
+		var kolorBoxJS = new ktools.Script("KolorBoxJS", crossDomainTargetUrl+"moderndata/graphics/KolorBox/KolorBox.min.js", [], true);
 		var kolorBoxPlugin = new ktools.KolorPlugin(pPlugID);
 		kolorBoxPlugin.addScript(kolorBoxJS);
 		kolorBoxPlugin.addCss(kolorBoxCSS);
