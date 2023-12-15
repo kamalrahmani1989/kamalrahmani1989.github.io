@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.19-pr16">
+
+    
+  <!-- Spot Style - Dark_blue -->
+
+
+  <style name="IconDark_blue"
+         url="%FIRSTXML%/spots/hotspot_plan_user_defaultpoint0.png"
+         visible="false"
+         edge="center"
+         onloaded="showPermanentTooltip(touch);"
+         onhover="onhoverIconDark_blue"
+         onover="onoverIconDark_blue"
+         onout="onoutIconDark_blue"
+
+         height="60"
+         width="60"
+         />
+  <action name="onhoverIconDark_blue">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconDark_blue">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconDark_blue">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Ivory -->
+
+
+  <style name="IconIvory"
+         url="%FIRSTXML%/spots/hotspot_plan_user_defaultpoint1.png"
+         visible="false"
+         edge="center"
+         onloaded="showPermanentTooltip(touch);"
+         onhover="onhoverIconIvory"
+         onover="onoverIconIvory"
+         onout="onoutIconIvory"
+
+         height="60"
+         width="60"
+         />
+  <action name="onhoverIconIvory">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconIvory">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconIvory">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Gray -->
+
+
+  <style name="IconGray"
+         url="%FIRSTXML%/spots/hotspot_plan_user_defaultpoint2.png"
+         visible="false"
+         edge="center"
+         onloaded="showPermanentTooltip(touch);"
+         onhover="onhoverIconGray"
+         onover="onoverIconGray"
+         onout="onoutIconGray"
+
+         height="60"
+         width="60"
+         />
+  <action name="onhoverIconGray">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconGray">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconGray">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - white&amp;wood -->
+
+
+  <style name="Iconwhite&amp;wood"
+         url="%FIRSTXML%/spots/hotspot_plan_sequence_user_defaultpoint3.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="67"
+         frameheight="67"
+         stopspotsequence="false"
+         crop="0|0|67|67"
+         edge="center"
+         onloaded="startspotanimation(0.1);showPermanentTooltip(touch);"
+         onhover="onhoverIconwhite&amp;wood"
+         onover="onoverIconwhite&amp;wood"
+         onout="onoutIconwhite&amp;wood"
+
+         height="60"
+         width="60"
+         />
+  <action name="onhoverIconwhite&amp;wood">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconwhite&amp;wood">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconwhite&amp;wood">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Gray&amp;wood -->
+
+
+  <style name="IconGray&amp;wood"
+         url="%FIRSTXML%/spots/hotspot_plan_sequence_user_defaultpoint4.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="67"
+         frameheight="67"
+         stopspotsequence="false"
+         crop="0|0|67|67"
+         edge="center"
+         onloaded="startspotanimation(0.1);showPermanentTooltip(touch);"
+         onhover="onhoverIconGray&amp;wood"
+         onover="onoverIconGray&amp;wood"
+         onout="onoutIconGray&amp;wood"
+
+         height="60"
+         width="60"
+         />
+  <action name="onhoverIconGray&amp;wood">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoverIconGray&amp;wood">
+
+
+pauseautorotation(forcehotspot);
+
+  </action>
+  <action name="onoutIconGray&amp;wood">
+    hideTooltip();
+
+
+resumeautorotation(forcehotspot);
+
+  </action>
+
+
+
+<!-- ********** -->
+<!-- Classic Control Bar -->
+<!-- id : controlBar_classic -->
+<!-- ********** -->
+
+  <krpano controlBar_classicbarbuilt="false" controlBar_classicbackgroundwidthwhenclosed="0" controlBar_classicbackgroundwidthwhenopened="0" controlBar_classicIsOpened="false" />
+  <events name="controlBar_classicevents" 
+    onxmlcomplete="controlBar_classicbuildMenuBar();" 
+
+
+    keep="true" />
+
+
+
+  <action name="controlBar_classicbuildMenuBar">
+    ifnot (controlBar_classicbarbuilt, controlBar_classicbuildMenu(); set(controlBar_classicbarbuilt, true););
+  </action>
+
+  <action name="controlBar_classicbuildMenu">
+    
+    set(controlBar_classicbutton_pos, 20);
+
+
+
+    if (device.fullscreensupport,
+      set(layer[controlBar_classicbtn_openfs ].x, get(controlBar_classicbutton_pos));
+      set(layer[controlBar_classicbtn_closefs].x, get(controlBar_classicbutton_pos));
+      inc(controlBar_classicbutton_pos, 36);
+    );
+
+
+
+
+    set(layer[controlBar_classicbtn_sound_on ].x, get(controlBar_classicbutton_pos));
+    set(layer[controlBar_classicbtn_sound_off].x, get(controlBar_classicbutton_pos));
+    inc(controlBar_classicbutton_pos, 36);
+
+
+
+
+
+
+
+
+    inc(controlBar_classicbutton_pos, 20);
+
+    set(controlBar_classicbackgroundwidthwhenopened, get(controlBar_classicbutton_pos));
+
+
+
+    
+    add(controlBar_classicVerifyVisibility, 20, 20);
+    if(controlBar_classicbackgroundwidthwhenopened == controlBar_classicVerifyVisibility,
+      set(controlBar_classicbackgroundwidthwhenopened, 0);
+
+
+    );
+
+	
+	
+  </action>
+
+	<events name="controlBar_classicStartTourEvents" onTourStart="controlBar_classicCallOnStartTour();" keep="true" />
+
+	<action name="controlBar_classicCallOnStartTour">
+		
+		set(layer[controlBar_classicmenu_controlbar_bg_img].width, get(controlBar_classicbutton_pos));
+		set(layer[controlBar_classicmenu_controlbar_bg].width, get(controlBar_classicbutton_pos));
+		controlBar_classicshowMenuControls();
+	</action>
+
+
+
+  <style name="controlBar_classic_btn_style"
+         keep="true"
+         alpha="0.8"
+         edge="right" align="right"
+         width="36" height="36"
+         zorder="3"
+         onover="controlBar_classicctrlbaronoveraction();"
+         onout="controlBar_classicctrlbaronoutaction();"
+         onhover="showTooltip('plugin', controlBar_classicmenuTooltipStyle, bottom);"
+         />
+  <action name="controlBar_classicctrlbaronoveraction">
+    tween(alpha,1,0.1,easeoutquad);
+    tween(y,-2,0.1,easeoutquad);
+  </action>  
+  <action name="controlBar_classicctrlbaronoutaction">
+    tween(alpha,0.8);
+    tween(y,0,0.1,easeoutquad);
+    hideTooltip();
+  </action>
+
+  <layer name="controlBar_classicmenu_controlbar_bg_img"
+         keep="true"
+         align="bottom"
+         x="25" y="25"
+         url="%FIRSTXML%/graphics/classiccontrolbar/footer.png"
+         zorder="1"
+         width="40"
+         height="40"
+         scale9grid="10|10|80|80"
+         visible="false"
+         />
+  <layer name="controlBar_classicmenu_controlbar_bg"
+         keep="true"
+         align="bottom"
+         x="25" y="25"
+         type="container"
+         zorder="2"
+         width="40"
+         height="40"
+         visible="false"
+         alpha="1.0"
+         >
+
+
+
+
+    <layer name="controlBar_classicbtn_sound_on"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_start_sound.png"
+            onclick="playTourSounds();
+"
+            style="controlBar_classic_btn_style"
+            visible="false"
+            tooltip="controlBar_classicsoundsOnTip"
+            />
+    <layer name="controlBar_classicbtn_sound_off"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_stop_sound.png"
+            onclick="stopTourSounds();
+"
+            style="controlBar_classic_btn_style"
+            visible="false"
+            tooltip="controlBar_classicsoundsOffTip"
+            />
+
+
+
+
+    <layer name="controlBar_classicbtn_openfs"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_enter_fs.png"
+            onclick="enterFullscreen();
+"
+            style="controlBar_classic_btn_style"
+            devices="fullscreensupport"
+            visible="false"
+            tooltip="controlBar_classicopenFsTip"
+            />
+    <layer name="controlBar_classicbtn_closefs"
+            url="%FIRSTXML%/graphics/classiccontrolbar/btn_close_fs.png"
+            onclick="exitFullscreen();
+"
+            style="controlBar_classic_btn_style"
+            visible="false"
+            devices="fullscreensupport"
+            tooltip="controlBar_classiccloseFsTip"
+            />
+
+
+
+
+
+  </layer>
+
+
+
+
+
+  <action name="controlBar_classichideMenuControls">
+    set(controlBar_classicIsOpened, false);
+    controlBar_classicupdateFullscreenButtons();
+
+    controlBar_classicupdateSoundButtons();
+
+
+
+
+
+
+
+
+
+    if(controlBar_classicbackgroundwidthwhenclosed == 0,
+      set(layer[controlBar_classicmenu_controlbar_bg_img].visible, false);
+      set(layer[controlBar_classicmenu_controlbar_bg].visible, false);
+    ,
+      set(layer[controlBar_classicmenu_controlbar_bg_img].visible, true);
+      set(layer[controlBar_classicmenu_controlbar_bg].visible, true);
+    );
+    tween(layer[controlBar_classicmenu_controlbar_bg_img].width,get(controlBar_classicbackgroundwidthwhenclosed),0.5,easeOutQuad);
+    tween(layer[controlBar_classicmenu_controlbar_bg].width,get(controlBar_classicbackgroundwidthwhenclosed),0.5,easeOutQuad);
+    tween(layer[controlBar_classicmenu_controlbar_bg_img].alpha,1.0,0.5,easeOutQuad);
+  </action>
+  <action name="controlBar_classicshowMenuControls">
+    set(controlBar_classicIsOpened, true);
+    if(controlBar_classicbackgroundwidthwhenopened == 0,
+      set(layer[controlBar_classicmenu_controlbar_bg_img].visible, false);
+      set(layer[controlBar_classicmenu_controlbar_bg].visible, false);
+    ,
+      set(layer[controlBar_classicmenu_controlbar_bg_img].visible, true);
+      set(layer[controlBar_classicmenu_controlbar_bg].visible, true);
+    );
+    tween(layer[controlBar_classicmenu_controlbar_bg_img].alpha,1.0,0.5,easeOutQuad);
+    controlBar_classicshowMenuButtons();
+
+
+      tween(layer[controlBar_classicmenu_controlbar_bg_img].width, get(controlBar_classicbackgroundwidthwhenopened),0.5,easeOutQuad);
+      tween(layer[controlBar_classicmenu_controlbar_bg].width, get(controlBar_classicbackgroundwidthwhenopened),0.5,easeOutQuad);
+
+
+  </action>
+  <action name="controlBar_classicshowMenuButtons">
+
+
+
+
+
+
+    controlBar_classicupdateFullscreenButtons();
+
+    controlBar_classicupdateSoundButtons();
+
+
+
+  </action>
+
+
+
+	<events name="controlBar_classicmenufullscreenchangeevent"
+		onenterfullscreen="controlBar_classicupdateFullscreenButtons();"
+		onexitfullscreen="controlBar_classicupdateFullscreenButtons();"
+		keep="true"/>
+	<action name="controlBar_classicHideFullscreenButtons">
+		set(layer[controlBar_classicbtn_openfs].visible , false);
+		set(layer[controlBar_classicbtn_closefs].visible, false);
+	</action>
+	<action name="controlBar_classicShowFullscreenButtons">
+		if (device.fullscreensupport,
+			if(tour_fullscreen,
+				set(layer[controlBar_classicbtn_openfs].visible , false);
+				set(layer[controlBar_classicbtn_closefs].visible, true);
+			,
+				set(layer[controlBar_classicbtn_openfs].visible ,true);
+				set(layer[controlBar_classicbtn_closefs].visible,false);
+			);
+		,
+			controlBar_classicHideFullscreenButtons();
+		);
+	</action>
+	<action name="controlBar_classicupdateFullscreenButtons">
+		if (controlBar_classicIsOpened,
+			controlBar_classicShowFullscreenButtons();
+		,
+			controlBar_classicHideFullscreenButtons();
+		);
+	</action>
+
+
+	<events name="controlBar_classicplaystopsoundsevent" 
+		playtoursoundsevent="controlBar_classicupdateSoundButtons();" 
+		stoptoursoundsevent="controlBar_classicupdateSoundButtons();" 
+		keep="true" />
+	<action name="controlBar_classicHideSoundButtons">
+		set(layer[controlBar_classicbtn_sound_off].visible, false);
+		set(layer[controlBar_classicbtn_sound_on].visible , false);
+	</action>
+	<action name="controlBar_classicShowSoundButtons">
+		if (tour_soundson == false,
+			set(layer[controlBar_classicbtn_sound_off].visible, false);
+			set(layer[controlBar_classicbtn_sound_on].visible , true);
+		,
+			set(layer[controlBar_classicbtn_sound_off].visible, true);
+			set(layer[controlBar_classicbtn_sound_on].visible , false);
+		);
+	</action>
+	<action name="controlBar_classicupdateSoundButtons">
+		if (controlBar_classicIsOpened,
+			controlBar_classicShowSoundButtons();
+		,
+			controlBar_classicHideSoundButtons();
+		);
+	</action>
+
+
+
+<layer name="controlBar_classicmenuTooltipStyle"
+	keep="true"
+	enabled="false"
+	capture="false"
+	type="text"
+	align="center"
+	bg="false"
+	bgborder="0"
+	txtshadow="1.0 1.0 4.0 0x000000 1"
+	css="color:#e6e6e6;font-family:Helvetica;font-weight:bold;font-size:14px;text-align:left;"
+	interactivecontent="false"
+	zorder="0"
+	visible="false"
+	html=""
+	padding="2"
+	xoffset="0"
+	yoffset="0"
+	edge="bottom"
+	/>
+
+
+
+<!-- ********** -->
+<!-- Gallery -->
+<!-- id : gallery -->
+<!-- ********** -->
+
+<ptplugin name="gallery" engine="kolorBox">
+	<settings>
+		<option name="position" value="bottom" type="string" />
+		<option name="margin_x" value="0" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="external_padding" value="15" type="int" />
+		<option name="draggable_box" value="false" type="bool" />
+		<option name="slideshow_autoplay" value="false" type="bool" />
+		<option name="slideshow" value="5000" type="int" />
+		<option name="container_auto_size" value="true" type="bool" />
+		<option name="container_width" value="100" type="int" />
+		<option name="container_width_unit" value="percent" type="string" />
+		<option name="container_height" value="100" type="int" />
+		<option name="container_height_unit" value="percent" type="string" />
+		<option name="container_color" value="ffffff" type="string" />
+		<option name="container_alpha" value="1" type="float" />
+		<option name="container_topleft_border_radius" value="15" type="int" />
+		<option name="container_topright_border_radius" value="15" type="int" />
+		<option name="container_bottomleft_border_radius" value="15" type="int" />
+		<option name="container_bottomright_border_radius" value="15" type="int" />
+		<option name="container_border_width" value="20" type="int" />
+		<option name="container_border_color" value="ffffff" type="string" />
+		<option name="container_border_alpha" value="1" type="float" />
+		<option name="overlay_displayed" value="true" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.50000762951094835" type="float" />
+
+		<option name="item_border_width" value="0" type="int" />
+		<option name="item_border_color" value="ffffff" type="string" />
+		<option name="item_border_alpha" value="1" type="float" />
+		
+		<option name="title_displayed" value="false" type="bool" />
+		
+		<option name="caption_displayed" value="false" type="bool" />
+		
+		<option name="play_displayed" value="true" type="bool" />
+		<option name="play_position" value="bottomleft" type="string" />
+		<option name="play_text" value="galleryplay_text" type="string" />
+
+
+
+
+		<option name="navigation_displayed" value="true" type="bool" />
+		<option name="navigation_position" value="bottom" type="string" />
+		<option name="counter_color" value="666666" type="string" />
+		<option name="navprev_text" value="gallerynavprev_text" type="string" />
+		<option name="navnext_text" value="gallerynavnext_text" type="string" />
+
+
+
+
+		<option name="navigation_arrows" value="true" type="bool" />
+
+
+
+
+		<option name="fullscreen_displayed" value="true" type="bool" />
+		<option name="fullscreen_position" value="topleft" type="string" />
+		<option name="fullscreen_text" value="galleryfullscreen_text" type="string" />
+
+
+
+
+		<option name="close_displayed" value="true" type="bool" />
+		<option name="close_position" value="topright" type="string" />
+		<option name="close_text" value="galleryclose_text" type="string" />
+
+		<option name="close_callback" value="invokeKrFunction('closeKolorBoxCallback_gallery')" type="string" />
+		<option name="zorder" value="4" type="int" />
+		<option name="use_i18n" value="true" type="bool" />
+	</settings>
+	<internaldata>
+		<item name="item_1" title="gallerypicture_title0" caption="gallerypicture_caption0" value="MNdata/graphics/gallery/l.jpg"/>
+		<item name="item_2" title="gallerypicture_title1" caption="gallerypicture_caption1" value="MNdata/graphics/gallery/b.jpg"/>
+		<item name="item_3" title="gallerypicture_title2" caption="gallerypicture_caption2" value="MNdata/graphics/gallery/c.jpg"/>
+		<item name="item_4" title="gallerypicture_title3" caption="gallerypicture_caption3" value="MNdata/graphics/gallery/n.jpg"/>
+		<item name="item_5" title="gallerypicture_title4" caption="gallerypicture_caption4" value="MNdata/graphics/gallery/m.jpg"/>
+		<item name="item_6" title="gallerypicture_title5" caption="gallerypicture_caption5" value="MNdata/graphics/gallery/a.jpg"/>
+		<item name="item_7" title="gallerypicture_title6" caption="gallerypicture_caption6" value="MNdata/graphics/gallery/d.jpg"/>
+		<item name="item_8" title="gallerypicture_title7" caption="gallerypicture_caption7" value="MNdata/graphics/gallery/e.jpg"/>
+		<item name="item_9" title="gallerypicture_title8" caption="gallerypicture_caption8" value="MNdata/graphics/gallery/h.jpg"/>
+		<item name="item_10" title="gallerypicture_title9" caption="gallerypicture_caption9" value="MNdata/graphics/gallery/moedrn__1_.jpg"/>
+		<item name="item_11" title="gallerypicture_title10" caption="gallerypicture_caption10" value="MNdata/graphics/gallery/moedrn__2_.jpg"/>
+		<item name="item_12" title="gallerypicture_title11" caption="gallerypicture_caption11" value="MNdata/graphics/gallery/moedrn__3_.jpg"/>
+	</internaldata>
+</ptplugin>
+
+<action name="kolorBoxJsReady_gallery">
+	set(ptplugin[gallery].jsready, true);
+</action>
+
+<action name="showGallery_gallery">
+	ifnot(ptplugin[gallery].isOpen,
+		set(ptplugin[gallery].isOpen, true);
+		set(ptplugin[gallery].doNotDeleteMe, false);
+		set(gallery_boxurl, %1);
+		pauseautorotation(forceplugin);
+
+		js(invokePluginFunction(gallery, openKolorBox, %1));
+		events.dispatch(onremovedisplayedobject);
+	,
+		if(%1 !== null AND %1 != gallery_boxurl,
+			closeKolorBox_gallery();
+			delayedcall(0.3,showGallery_gallery(%1););
+		);
+	);
+</action>
+
+<action name="toggleGallery_gallery">
+	js(invokePluginFunction(gallery, toggleKolorBox, %1));
+</action>
+
+
+<action name="closeKolorBox_gallery">
+	js(invokePluginFunction(gallery, closeKolorBox));
+</action>
+
+<action name="closeKolorBoxCallback_gallery">
+	resumeautorotation(forceplugin);
+
+	set(ptplugin[gallery].isOpen, false);
+</action>
+
+<action name="changeLanguage_gallery">
+	if(ptplugin[gallery].jsready,
+		js(invokePluginFunction(gallery, changeLanguage));
+	,
+		delayedcall(delay_gallery, 0.1, changeLanguage_gallery(););
+	);
+</action>
+
+<events name="kolorBoxEvents_gallery" 
+	keep="true"
+	changetourlanguage="changeLanguage_gallery();"
+	/>
+
+<!-- ********** -->
+<!-- Button -->
+<!-- id : button -->
+<!-- ********** -->
+
+  <layer name="button"
+         keep="true"
+         url="%FIRSTXML%/graphics/button/off.png"
+         align="bottomleft"
+         x="25"
+         y="25"
+         zorder="5"
+         visible="false"
+         onclick="buttonOnClick"
+         tooltip="buttontooltip"
+         onhover="showTooltip('plugin');"
+         onout="hideTooltip();"
+         onover="set(layer[buttonover].visible, true);set(layer[button].visible, false);"
+         height="80"
+         width="100"
+         />
+
+
+<layer name="buttonover"
+         keep="true"
+         url="%FIRSTXML%/graphics/button/on.png"
+         align="bottomleft"
+         x="25"
+         y="25"
+         zorder="5"
+         visible="false"
+         onclick="buttonOnClick"
+         tooltip="buttontooltip"
+         onhover="showTooltip('plugin');"
+         onout="hideTooltip();set(layer[button].visible, true);set(layer[buttonover].visible, false);"
+         onover=""
+         height="80"
+         width="100"
+         />
+
+
+  <action name="buttonOnClick">showGallery_gallery();
+
+
+  </action>
+
+  <events name="buttonevents"
+    onTourStart="showbutton();"
+    hidetourcontrols="hidebutton();"
+    showtourcontrols="showbutton();"
+    keep="true" />
+  <action name="hidebutton">set(layer[button].visible, false);</action>
+  <action name="showbutton">if(tour_displaycontrols,set(layer[button].visible, true);set(layer[buttonover].visible, false);,hidebutton(););</action>
+
+
+  <!-- Sounds Management -->
+  <plugin name="soundinterface"
+          preload="true"
+          url.flash="%SWFPATH%/graphics/soundinterface.swf"
+          url.html5="%FIRSTXML%/graphics/soundinterface.js"
+          rootpath="%$videos_sounds_path%/sounds"
+          backgroundsound=""
+          backgroundsoundloops="0"
+          bgsound="false"
+          bgsoundpaused="false"
+          bgsoundloopended="false"
+          bgsoundtoforce = "false"
+          volumeinitialized="false"
+          started="true"
+          keep="true"/>
+  <events name="soundmanagementevents"
+          onnewpano="if(plugin[soundinterface].started,playbackgroundsound(););"
+          onxmlcomplete="soundinterfaceonxmlcomplete();"
+          keep="true"/>
+  <action name="soundinterfaceonxmlcomplete">
+    ifnot(plugin[soundinterface].volumeinitialized,
+      div(plugin[soundinterface].volume, tour_soundsvolume, 100);
+      set(plugin[soundinterface].volumeinitialized,true);
+    );
+  </action>
+  <action name="playsound3Dwhenpossible">
+    set(really_play_sound, true);
+    if (tour_current_played_sound,
+      if (%1 == tour_current_played_sound,
+        delete(tour_current_played_sound);
+        set(tour_current_played_sound_state, 0);
+        delete(tour_current_played_sound_paused);
+        stopsound(%1);
+        set(really_play_sound, false);
+        if(%4,
+          delete(tour_current_played_sound_pausesound);
+          resumeTourSoundsActions(true,true,true,true,true);
+        );
+      );
+    );
+    if (really_play_sound,
+      if (tour_current_played_sound,
+        stopsound(get(tour_current_played_sound));
+
+        ifnot(%4,
+          if(tour_current_played_sound_pausesound,
+            delete(tour_current_played_sound_pausesound);
+            resumeTourSoundsActions(true,true,true,true,true);
+          );
+        );
+      );
+      if(%4,
+        set(tour_current_played_sound_pausesound, true);
+        pauseTourSoundsActions(true,false,true,true,true);
+      );
+      set(tour_current_played_sound, %1);
+      if(tour_current_played_video,
+        set(tour_current_played_sound_state, 2);
+      ,
+        set(tour_current_played_sound_state, 1);
+      );
+      set(tour_current_played_sound_paused, false);
+      if (%3,
+        if (device.flash,
+          div(volume, tour_soundsvolume, 100);
+          if(%9 != null,
+            playsound3D(%1,%2,%5,%6,%7,get(volume),%8,stopsound3Dwhenpossible(%1,%4));
+          ,
+            playsound3D(%1,%2,%5,%6,%7,get(volume),%8);
+          );
+        ,
+          if(%9 != null,
+            playsound(%1,%2,%8,stopsound3Dwhenpossible(%1,%4));
+          ,
+            playsound(%1,%2,%8);
+          );
+        );
+      ,
+        if(%6 != null,
+          playsound(%1,%2,%5,stopsound3Dwhenpossible(%1,%4));
+        ,
+          playsound(%1,%2,%5);
+        );
+      );
+
+      ifnot(tour_soundson,
+        set(tour_current_played_sound_paused, true);
+        pausesound(%1);
+      );
+    );
+  </action>
+  <action name="stopsound3Dwhenpossible">
+    if (%1 == tour_current_played_sound,
+      delete(tour_current_played_sound);
+      set(tour_current_played_sound_state, 0);
+      delete(tour_current_played_sound_paused);
+
+      ifnot(device.safari,
+        stopsound(%1);
+      );
+      if(%2,
+        delete(tour_current_played_sound_pausesound);
+        resumeTourSoundsActions(true,true,true,true,true);
+      );
+    );
+  </action>
+  <action name="playbackgroundsound">
+  if(playsound,
+    if (xml.scene,
+      if (scene[get(xml.scene)].backgroundsound,
+        if (plugin[soundinterface].backgroundsound != scene[get(xml.scene)].backgroundsound,
+          copy(plugin[soundinterface].backgroundsound, scene[get(xml.scene)].backgroundsound);
+          copy(plugin[soundinterface].backgroundsoundloops, scene[get(xml.scene)].backgroundsoundloops);
+          if (tour_soundson,
+            set(plugin[soundinterface].bgsound, true);
+            set(plugin[soundinterface].bgsoundpaused, false);
+            set(plugin[soundinterface].bgsoundloopended, false);
+            set(plugin[soundinterface].bgsoundtoforce, false);
+            if(scene[get(xml.scene)].video == false OR (scene[get(xml.scene)].video == true AND scene[get(xml.scene)].scenevideomute == true),
+              if(plugin[soundinterface].backgroundsoundloops GT 0,
+                playsound(bgsoundname, get(plugin[soundinterface].backgroundsound), get(plugin[soundinterface].backgroundsoundloops), stopbackgroundsoundoncomplete());
+              ,
+                playsound(bgsoundname, get(plugin[soundinterface].backgroundsound), get(plugin[soundinterface].backgroundsoundloops));
+              );
+            );
+           ,
+            set(plugin[soundinterface].bgsoundtoforce, true);
+            set(plugin[soundinterface].bgsound, false);
+          );
+        ,
+          if (tour_soundson,
+            if((plugin[soundinterface].bgsoundpaused == true AND scene[get(xml.scene)].video == false) OR (scene[get(xml.scene)].video == true AND scene[get(xml.scene)].scenevideomute == true),
+              resumesound(bgsoundname);
+              set(plugin[soundinterface].bgsoundpaused, false);
+            );
+          ,
+            set(plugin[soundinterface].bgsoundtoforce, true);
+            set(plugin[soundinterface].bgsound, false);
+          );
+        );
+      );
+    );
+  ,
+    delayedcall(0.2, playbackgroundsound());
+  );
+  </action>
+  <action name="stopbackgroundsoundoncomplete">
+    if (plugin[soundinterface].backgroundsound,
+    if (plugin[soundinterface].backgroundsoundloops GT 0,
+
+      set(plugin[soundinterface].backgroundsoundloops, 0);
+      set(plugin[soundinterface].bgsound, false);
+      set(plugin[soundinterface].bgsoundpaused, false);
+      set(plugin[soundinterface].bgsoundloopended, true);
+    );
+    );
+  </action>
+  <action name="resetbackgroundsoundifneeded">
+    if (xml.scene,
+      if (scene[get(xml.scene)].backgroundsound != scene[%1].backgroundsound,
+        if(plugin[soundinterface].backgroundsound,
+          stopsound(bgsoundname);
+        );
+        set(plugin[soundinterface].backgroundsound, "");
+        set(plugin[soundinterface].backgroundsoundloops, 0);
+        set(plugin[soundinterface].bgsound, false);
+        set(plugin[soundinterface].bgsoundpaused, false);
+        set(plugin[soundinterface].bgsoundloopended, false);
+      );
+    );
+  </action>
+  <action name="pausebackgroundsound">
+    if(plugin[soundinterface].backgroundsound,
+      if (plugin[soundinterface].bgsound,
+        if(plugin[soundinterface].bgsoundpaused == false AND plugin[soundinterface].bgsoundloopended == false,
+          pausesound(bgsoundname);
+          set(plugin[soundinterface].bgsoundpaused, true);
+        );
+      );
+    );
+    
+  </action>
+  <action name="resumebackgroundsound">
+    set(bgSoundOnResume, true);
+    set(forceBgSoundOnResume, true);
+    if(layer[displayedStandardVideo],
+    if(layer[displayedStandardVideo].pausebgsound AND tour_current_played_video,
+      set(bgSoundOnResume, false);
+      set(forceBgSoundOnResume, false);
+    ););
+    if(layer[webvideodisplay_player],
+    if(layer[webvideodisplay_player].pausebgsound AND tour_current_played_web_video,
+      set(bgSoundOnResume, false);
+      set(forceBgSoundOnResume, false);
+    ););
+    if(tour_current_played_sound_pausesound AND tour_current_played_sound,
+      set(bgSoundOnResume, false);
+    );
+    ifnot(plugin[soundinterface].backgroundsound AND scene[get(xml.scene)].backgroundsound,
+      set(bgSoundOnResume, false);
+    );
+    if(videospots_playing GT 0,
+      set(bgSoundOnResume, false);
+      set(forceBgSoundOnResume, false);
+    );
+    if(bgSoundOnResume,
+      if (plugin[soundinterface].backgroundsound,
+        if (tour_soundson,
+          if (plugin[soundinterface].bgsound AND plugin[soundinterface].bgsoundloopended == false,
+            if((plugin[soundinterface].bgsoundpaused == true AND scene[get(xml.scene)].video == false) OR (scene[get(xml.scene)].video == true AND scene[get(xml.scene)].scenevideomute == true),
+              resumesound(bgsoundname);
+              set(plugin[soundinterface].bgsoundpaused, false);
+            ,
+
+              if(device.mobile OR device.tablet OR device.safari OR device.chrome,
+                resumesound(bgsoundname);
+                set(plugin[soundinterface].bgsoundpaused, false);
+              );
+            );
+          ,
+            if(((plugin[soundinterface].bgsoundpaused == true OR plugin[soundinterface].bgsoundtoforce == true) AND scene[get(xml.scene)].video == false) OR (scene[get(xml.scene)].video == true AND scene[get(xml.scene)].scenevideomute == true),
+              set(plugin[soundinterface].bgsound, true);
+              set(plugin[soundinterface].bgsoundpaused, false);
+              set(plugin[soundinterface].bgsoundloopended, false);
+              set(plugin[soundinterface].bgsoundtoforce, false);
+              if(plugin[soundinterface].backgroundsoundloops GT 0,
+                playsound(bgsoundname, get(plugin[soundinterface].backgroundsound), get(plugin[soundinterface].backgroundsoundloops), stopbackgroundsoundoncomplete());
+              ,
+                playsound(bgsoundname, get(plugin[soundinterface].backgroundsound), get(plugin[soundinterface].backgroundsoundloops));
+              );
+            );
+          );
+        );
+      );
+      
+    ,
+      if(forceBgSoundOnResume,
+        playbackgroundsound();
+        
+      );
+    );
+  </action>
+  <action name="preloadSounds">
+    preloadsound("bikalam-piano-rain_320_.mp3");
+    preloadsound("bikalam-irani-tanhaei_320_.mp3");
+    preloadsound("bikalam-torki-okaya_320_.mp3");
+  </action>
+
+  <action name="play3DLocalSounds">
+    if (xml.scene, if (scene[get(xml.scene)].haslocalsounds, playpanolocalsounds();););
+  </action>
+  <action name="stop3DLocalSounds">
+    if (xml.scene, if (scene[get(xml.scene)].haslocalsounds, stoppanolocalsounds();););
+  </action>
+  <action name="resume3DLocalSounds">
+    if (xml.scene, if (scene[get(xml.scene)].haslocalsounds, 
+      set(kill3dSoundOnResume, true);
+      if(layer[displayedStandardVideo],
+      if(layer[displayedStandardVideo].pausebgsound,
+      if(tour_current_played_video,
+        set(kill3dSoundOnResume, false);
+      );););
+      if(layer[webvideodisplay_player],
+      if(layer[webvideodisplay_player].pausebgsound,
+      if(tour_current_played_web_video,
+        set(kill3dSoundOnResume, false);
+      );););
+      if(tour_current_played_sound_pausesound,
+      if(tour_current_played_sound,
+        set(kill3dSoundOnResume, false);
+      ););
+      if(kill3dSoundOnResume,
+        resumepanolocalsounds();
+      );
+    ););
+  </action>
+  <action name="pause3DLocalSounds">
+    if (xml.scene, if (scene[get(xml.scene)].haslocalsounds, pausepanolocalsounds();););
+  </action>
+  <action name="set3DLocalSoundsVolume">
+    if (xml.scene, if (scene[get(xml.scene)].haslocalsounds, setpanolocalsoundsvolume();););
+  </action>
+  <action name="playTourSounds">
+    set(tour_soundson, true);events.dispatch(playtoursoundsevent);
+    resumeTourSoundsActions(true,true,true,true,true);
+  </action>
+  <action name="stopTourSounds">
+    set(tour_soundson, false);events.dispatch(stoptoursoundsevent);
+    pauseTourSoundsActions(true,true,true,true,true);
+  </action>
+  <action name="setTourSoundsVolume">
+    set(tour_soundsvolume, %1);events.dispatch(changetoursoundsevent);
+    div(volume, tour_soundsvolume, 100);
+    set(plugin[soundinterface].volume, get(volume));
+    set3DLocalSoundsVolume();
+  </action>
+  <action name="playTourSoundsActions">
+    if(%1,
+      if(plugin[soundinterface],
+        if(plugin[soundinterface].started,
+        play3DLocalSounds();
+        );
+      );
+    );
+    if(%2,
+      if(plugin[soundinterface],
+        if(plugin[soundinterface].started,
+          resumebackgroundsound();
+        );
+      );
+    );
+  </action>
+  <action name="stopTourSoundsActions">
+    if(%1,
+      stop3DLocalSounds();
+    );
+    if(%2,
+      stopSoundActionsSounds();
+    );
+    if(%3,
+      stopVideoActionsSounds();
+    );
+    if(%4,
+      pausebackgroundsound();
+    );
+  </action>
+  <action name="resumeTourSoundsActions">
+    if(%1,
+      if(plugin[soundinterface],
+        if(plugin[soundinterface].started,
+        resume3DLocalSounds();
+        );
+      );
+    );
+    if(%2,
+      resumeSoundActionsSounds();
+    );
+    if(%3,
+      resumeVideoActionsSounds();
+    );
+    if(%4,
+      if(%5,
+        if(plugin[soundinterface],
+          if(plugin[soundinterface].started,
+            resumebackgroundsound();
+          );
+        );
+      ,
+        pausebackgroundsound();
+      );
+    );
+  </action>
+  <action name="pauseTourSoundsActions">
+    if(%1,
+      pause3DLocalSounds();
+    );
+    if(%2,
+      pauseSoundActionsSounds();
+    );
+    if(%3,
+      pauseVideoActionsSounds();
+    );
+    if(%4,
+      if(%5,
+        pausebackgroundsound();
+      ,
+        if(plugin[soundinterface],
+          if(plugin[soundinterface].started,
+            resumebackgroundsound();
+          );
+        );
+      );
+    );
+  </action>
+  <action name="stopSoundActionsSounds">
+    if (tour_current_played_sound,
+      delete(tour_current_played_sound_paused);
+      stopsound(get(tour_current_played_sound));
+      delete(tour_current_played_sound);
+      set(tour_current_played_sound_state, 0);
+    );
+  </action>
+  <action name="stopVideoActionsSounds">
+    if(tour_current_played_video,
+      if(layer[displayedStandardVideo],
+        layer[displayedStandardVideo].stop();
+        removelayer(displayedStandardVideo);
+        if(layer[displayedStandardVideoOverlayButton], removelayer(displayedStandardVideoOverlayButton); );
+        if(layer[displayedStandardVideoOverlay], removelayer(displayedStandardVideoOverlay); );
+        delete(tour_current_played_video);
+        set(tour_current_played_video_state, 0);
+      );
+    );
+    if(tour_current_played_web_video,
+      displayWebVideoObjectClose();
+    );
+  </action>
+  <action name="resumeSoundActionsSounds">
+    if (tour_current_played_sound,
+      set(resumeSoundActionsVerification, true);
+      if(tour_current_played_video,
+        if(tour_current_played_sound_state LT tour_current_played_video_state,
+          set(resumeSoundActionsVerification, false);
+        );
+      );
+      if(resumeSoundActionsVerification,
+        if (tour_soundson,
+          if(tour_current_played_sound_paused,
+            set(tour_current_played_sound_paused, false);
+            resumesound(get(tour_current_played_sound));
+          ,
+
+            if(device.mobile OR device.tablet OR device.safari OR device.chrome,
+              set(tour_current_played_sound_paused, false);
+              resumesound(get(tour_current_played_sound));
+            );
+          );
+        );
+      );
+    );
+  </action>
+  <action name="resumeVideoActionsSounds">
+    if(tour_current_played_video,
+      set(resumeVideoActionsVerification, true);
+      if(tour_current_played_sound,
+        if(tour_current_played_video_state LT tour_current_played_sound_state,
+          set(resumeVideoActionsVerification, false);
+        );
+      );
+      if(resumeVideoActionsVerification,
+        if (tour_soundson,
+          if(device.flash OR (device.webgl AND !device.ios),
+            div(volume, tour_soundsvolume, 100);
+            set(layer[displayedStandardVideo].volume, get(volume));
+          ,
+            ifnot(device.ios,
+              js(kpanotour.Sounds.startVideosSounds(get(volume)));
+            ,
+              if(tour_soundsvolume GT 0,
+                set(layer[displayedStandardVideo].muted, false);
+              ,
+                set(layer[displayedStandardVideo].muted, true);
+              );
+            );
+          );
+        ,
+          if(device.flash OR (device.webgl AND !device.ios),
+            set(layer[displayedStandardVideo].volume, 0);
+          ,
+            ifnot(device.ios,
+              js(kpanotour.Sounds.stopVideosSounds());
+            ,
+              set(layer[displayedStandardVideo].muted, true);
+            );
+          );
+        );
+      );
+    );
+  </action>
+  <action name="pauseSoundActionsSounds">
+    if (tour_current_played_sound,
+      ifnot(tour_current_played_sound_paused,
+        set(tour_current_played_sound_paused, true);
+        pausesound(get(tour_current_played_sound));
+      );
+    );
+  </action>
+  <action name="pauseVideoActionsSounds">
+    if(tour_current_played_video,
+      if(device.flash OR (device.webgl AND !device.ios),
+        set(layer[displayedStandardVideo].volume, 0);
+      ,
+        ifnot(device.ios,
+          js(kpanotour.Sounds.stopVideosSounds());
+        ,
+          set(layer[displayedStandardVideo].muted, true);
+        );
+      );
+    );
+  </action>
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
+
+</krpano>
